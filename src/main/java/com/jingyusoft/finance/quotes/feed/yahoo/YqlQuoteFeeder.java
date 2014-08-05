@@ -7,6 +7,8 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Service;
 
 import com.google.gson.Gson;
@@ -14,22 +16,30 @@ import com.jingyusoft.finance.quotes.feed.QuoteFeeder;
 import com.jingyusoft.finance.quotes.feed.yahoo.dto.YqlJsonResponse;
 
 @Service
-public class YahooYqlQuoteFeeder implements QuoteFeeder {
+public class YqlQuoteFeeder implements QuoteFeeder {
 
 	public static void main(String[] args) throws IOException {
-		new YahooYqlQuoteFeeder().test();
+
+		@SuppressWarnings("resource")
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(
+				"classpath:com/jingyusoft/finance/config/application-context-feed.xml");
+		applicationContext.getBean(YqlQuoteFeeder.class).test();
 	}
 
-	@Value("#{feed.yahoo.yql.baseurl}")
-	private final String baseUrl = "http://query.yahooapis.com/v1/public/yql?";
+	@Value("${feed.yahoo.yql.baseurl}")
+	private String baseUrl;
+
+	@Value("${feed.yahoo.yql.format}")
+	private String format;
+
+	@Value("${feed.yahoo.yql.env}")
+	private String env;
 
 	public void test() throws IOException {
 
 		String query = "select * from yahoo.finance.quotes where symbol in ('MS', 'GS')";
-		String fullUrlStr = baseUrl
-				+ "q="
-				+ URLEncoder.encode(query, "UTF-8")
-				+ "&format=json&env=store%3A%2F/datatables.org%2Falltableswithkeys";
+		String fullUrlStr = baseUrl + "q=" + URLEncoder.encode(query, "UTF-8")
+				+ "&format=" + format + "&env=" + env;
 
 		System.out.println(fullUrlStr);
 
