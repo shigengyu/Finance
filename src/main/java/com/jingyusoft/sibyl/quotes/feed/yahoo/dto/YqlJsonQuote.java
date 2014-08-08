@@ -1,4 +1,4 @@
-package com.jingyusoft.finance.quotes.feed.yahoo.dto;
+package com.jingyusoft.sibyl.quotes.feed.yahoo.dto;
 
 import com.google.gson.annotations.SerializedName;
 

@@ -1,4 +1,4 @@
-package com.jingyusoft.finance.quotes.feed.yahoo.dto;
+package com.jingyusoft.sibyl.quotes.feed.yahoo.dto;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package com.jingyusoft.finance.quotes.feed.yahoo;
+package com.jingyusoft.sibyl.quotes.feed.yahoo;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,9 +17,9 @@ import org.springframework.stereotype.Service;
 import com.google.common.collect.Lists;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
-import com.jingyusoft.finance.quotes.feed.QuoteFeeder;
-import com.jingyusoft.finance.quotes.feed.yahoo.dto.YqlJsonQuote;
-import com.jingyusoft.finance.quotes.feed.yahoo.dto.YqlJsonResponse;
+import com.jingyusoft.sibyl.quotes.feed.QuoteFeeder;
+import com.jingyusoft.sibyl.quotes.feed.yahoo.dto.YqlJsonQuote;
+import com.jingyusoft.sibyl.quotes.feed.yahoo.dto.YqlJsonResponse;
 
 @Service
 public class YqlQuoteFeeder implements QuoteFeeder {
