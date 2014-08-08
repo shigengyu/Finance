@@ -9,13 +9,13 @@
 	</appender>
 
 	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>${finance.log.dir:-logs/unknown}/finance.log</file>
+		<file>${sibyl.log.dir:-logs/unknown}/sibyl.log</file>
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 
 		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-			<FileNamePattern>${finance.log.dir:-logs/unknown}/finance.%i.log.zip</FileNamePattern>
+			<FileNamePattern>${sibyl.log.dir:-logs/unknown}/finance.%i.log.zip</FileNamePattern>
 			<MinIndex>1</MinIndex>
 			<MaxIndex>10</MaxIndex>
 		</rollingPolicy>
@@ -26,13 +26,13 @@
 	</appender>
 
 	<appender name="HIBERNATE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>${finance.log.dir:-logs/unknown}/finance.hibernate.log</file>
+		<file>${sibyl.log.dir:-logs/unknown}/finance.hibernate.log</file>
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 
 		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-			<FileNamePattern>${finance.log.dir:-logs/unknown}/finance.hibernate.%i.log.zip</FileNamePattern>
+			<FileNamePattern>${sibyl.log.dir:-logs/unknown}/finance.hibernate.%i.log.zip</FileNamePattern>
 			<MinIndex>1</MinIndex>
 			<MaxIndex>10</MaxIndex>
 		</rollingPolicy>
@@ -43,13 +43,13 @@
 	</appender>
 
 	<appender name="HIBERNATE-SCHEMA" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>${finance.log.dir:-logs/unknown}/finance.hibernate.schema.log</file>
+		<file>${sibyl.log.dir:-logs/unknown}/finance.hibernate.schema.log</file>
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 
 		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-			<FileNamePattern>${finance.log.dir:-logs/unknown}/finance.hibernate.schema.%i.log.zip</FileNamePattern>
+			<FileNamePattern>${sibyl.log.dir:-logs/unknown}/finance.hibernate.schema.%i.log.zip</FileNamePattern>
 			<MinIndex>1</MinIndex>
 			<MaxIndex>10</MaxIndex>
 		</rollingPolicy>
@@ -60,13 +60,13 @@
 	</appender>
 
 	<appender name="HIBERNATE-SQL" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>${finance.log.dir:-logs/unknown}/finance.hibernate.sql.log</file>
+		<file>${sibyl.log.dir:-logs/unknown}/finance.hibernate.sql.log</file>
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 
 		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-			<FileNamePattern>${finance.log.dir:-logs/unknown}/finance.hibernate.sql.%i.log.zip</FileNamePattern>
+			<FileNamePattern>${sibyl.log.dir:-logs/unknown}/finance.hibernate.sql.%i.log.zip</FileNamePattern>
 			<MinIndex>1</MinIndex>
 			<MaxIndex>10</MaxIndex>
 		</rollingPolicy>
@@ -77,13 +77,13 @@
 	</appender>
 
 	<appender name="SPRING" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>${finance.log.dir:-logs/unknown}/finance.spring.log</file>
+		<file>${sibyl.log.dir:-logs/unknown}/finance.spring.log</file>
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 
 		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-			<FileNamePattern>${finance.log.dir:-logs/unknown}/finance.spring.%i.log.zip</FileNamePattern>
+			<FileNamePattern>${sibyl.log.dir:-logs/unknown}/finance.spring.%i.log.zip</FileNamePattern>
 			<MinIndex>1</MinIndex>
 			<MaxIndex>10</MaxIndex>
 		</rollingPolicy>
